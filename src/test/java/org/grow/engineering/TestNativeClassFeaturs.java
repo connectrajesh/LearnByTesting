@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.junit.Test;
 
+
 import java.util.Map;
 import java.util.Stack;
 
@@ -19,13 +20,13 @@ public class TestNativeClassFeaturs
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void shouldAnswerWithTrueTest()
     {
         assertTrue( true );
     }
 
     @Test
-    public void hashMapExploration_Case1_CheckSizeByPutAndAssert()
+    public void hashMapExploration_Case1_CheckSizeByPutAndAssertTest()
     {
         HashMap<String, String> capitalCities=new HashMap<String, String>();
         capitalCities.put("England","London");
@@ -102,12 +103,9 @@ public class TestNativeClassFeaturs
         String stringForTest=new String("{\"name\":\"Rajesh\",\"age\":30}");
         assertEquals(stringForTest.substring(0,3), "Raj");
     }
-    @Test
+
     public void seleniumLogging()
     {
-        //org.openqa.selenium.logging.LoggingPreferences logPrefs = new org.openqa.selenium.logging.LoggingPreferences();
-        //logPrefs.enable(org.openqa.selenium.logging.LogType.BROWSER, java.util.logging.Level.ALL);
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         org.openqa.selenium.WebDriver driver = new org.openqa.selenium.chrome.ChromeDriver();
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
@@ -121,6 +119,8 @@ public class TestNativeClassFeaturs
         stackTesting.push("Test");
         assertEquals("Test",stackTesting.pop());
     }
-    
+
+
+
 
 }

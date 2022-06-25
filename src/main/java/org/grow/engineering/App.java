@@ -1,5 +1,7 @@
 package org.grow.engineering;
 
+import java.io.IOException;
+
 /**
  * Hello world!
  *
@@ -205,17 +207,21 @@ public String getJsonString()
     {
         try
         {
-            java.net.URL url=new java.net.URL("http://www.google.com");
-            java.net.HttpURLConnection con=(java.net.HttpURLConnection)url.openConnection();
-            con.setRequestMethod("GET");
-            con.connect();
-            int responseCode=con.getResponseCode();
-            System.out.println(responseCode);
+            callCommonConnection();
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
+    }
+
+    private void callCommonConnection() throws IOException {
+        java.net.URL url=new java.net.URL("https://www.google.com");
+        java.net.HttpURLConnection con=(java.net.HttpURLConnection)url.openConnection();
+        con.setRequestMethod("GET");
+        con.connect();
+        int responseCode=con.getResponseCode();
+        System.out.println(responseCode);
     }
 
     //Bank accounting - calculate interest
@@ -230,12 +236,7 @@ public String getJsonString()
     {
         try
         {
-            java.net.URL url=new java.net.URL("http://www.google.com");
-            java.net.HttpURLConnection con=(java.net.HttpURLConnection)url.openConnection();
-            con.setRequestMethod("GET");
-            con.connect();
-            int responseCode=con.getResponseCode();
-            System.out.println(responseCode);
+            callCommonConnection();
         }
         catch(Exception e)
         {
