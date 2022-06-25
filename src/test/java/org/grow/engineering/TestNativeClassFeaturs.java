@@ -120,7 +120,11 @@ public class TestNativeClassFeaturs
         assertEquals("Test",stackTesting.pop());
     }
 
-
+    @Test
+    public int calculateTwoNumbers(int firstNumber, int secondNumber)
+    {
+        return firstNumber+secondNumber;
+    }
 
 
 }
