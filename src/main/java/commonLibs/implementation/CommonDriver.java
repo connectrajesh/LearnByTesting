@@ -73,4 +73,14 @@ public class CommonDriver {
         driver.manage().timeouts().implicitlyWait(elementDetectionTimeout, java.util.concurrent.TimeUnit.SECONDS);
         driver.get(url);
     }
+
+    public void closeAllBrowser()
+    {
+        driver.quit();
+    }
+
+    public String getTitleOfThePage()
+    {
+        return driver.getTitle();
+    }
 }
